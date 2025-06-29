@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  padding: 40px;
+  font-family: "Segoe UI", sans-serif;
+  background: #ded7ee;
+  color: #2b2a3e;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.weather-app {
+  background: white;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(46, 41, 78, 0.1);
+  z-index: 1;
+}
+
+header form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+input[type="search"] {
+  flex-grow: 1;
+  padding: 14px 16px;
+  border: 2px solid #dad4ec;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #fdfbff;
+}
+
+input[type="submit"] {
+  background: #7d6ce0;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background: #6a5bcc;
+}
+
+.current-weather {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.current-weather h1 {
+  margin: 0 0 6px 0;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.current-weather p {
+  margin: 0;
+  font-size: 14px;
+  color: #6d6a7c;
+}
+
+.current-weather strong {
+  color: #e36b8c;
+}
+
+.current-temp {
+  font-size: 42px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.current-temp .icon {
+  font-size: 36px;
+  margin-right: 8px;
+}
+
+.forecast-weather {
+  margin-top: 30px;
+}
+
+.forecast-weather ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  margin: 0;
+}
+
+.forecast-weather li {
+  flex: 1;
+  min-width: 80px;
+  text-align: center;
+  background: #fdfbff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 10px rgba(46, 41, 78, 0.05);
+  color: #2b2a3e;
+}
+
+.forecast-day {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.forecast-icon {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.forecast-temp .max {
+  font-weight: bold;
+  color: #e36b8c;
+}
+
+.forecast-temp .min {
+  margin-left: 6px;
+  color: #6d6a7c;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 13px;
+  color: #a0a0b5;
+}
+
+footer a {
+  color: #7d6ce0;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.app-logo {
+  display: block;
+  max-width: 120px;
+  height: auto;
+  margin: 0 0 20px 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeSlideIn 1s ease-out forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

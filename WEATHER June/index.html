@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="weather-app">
+      <img src="./undraw_weather.svg" alt="logo" class="app-logo" />
+      <header>
+        <!-- Added id="search-form" for JS handling -->
+        <form id="search-form">
+          <input
+            type="search"
+            id="city-input"
+            placeholder="Enter a city.."
+            required
+          />
+          <input type="submit" value="Search" />
+        </form>
+      </header>
+
+      <main>
+        <div class="current-weather">
+          <div class="current-city">
+            <!-- Added id="city-name" to update city text -->
+            <h1 id="city-name">Valencia</h1>
+            <p>
+              <!-- Insert dynamic date and time here -->
+              <span id="date-time">Tuesday 16:00</span>, moderate rain<br />
+              Humidity: <strong>77%</strong>, Wind: <strong>10.2km/h</strong>
+            </p>
+          </div>
+          <div class="current-temp">
+            <span class="icon">🌤️</span>
+            <span class="temperature">23</span><span class="unit">°C</span>
+          </div>
+        </div>
+
+        <section class="forecast-weather">
+          <ul>
+            <li>
+              <div class="forecast-day">Sun</div>
+              <div class="forecast-icon">🌤️</div>
+              <div class="forecast-temp">
+                <span class="max">19°</span>
+                <span class="min">12°</span>
+              </div>
+            </li>
+            <li>
+              <div class="forecast-day">Mon</div>
+              <div class="forecast-icon">🌦️</div>
+              <div class="forecast-temp">
+                <span class="max">18°</span>
+                <span class="min">9°</span>
+              </div>
+            </li>
+            <li>
+              <div class="forecast-day">Tue</div>
+              <div class="forecast-icon">☀️</div>
+              <div class="forecast-temp">
+                <span class="max">25°</span>
+                <span class="min">13°</span>
+              </div>
+            </li>
+            <li>
+              <div class="forecast-day">Wed</div>
+              <div class="forecast-icon">🌧️</div>
+              <div class="forecast-temp">
+                <span class="max">18°</span>
+                <span class="min">12°</span>
+              </div>
+            </li>
+            <li>
+              <div class="forecast-day">Thu</div>
+              <div class="forecast-icon">🌥️</div>
+              <div class="forecast-temp">
+                <span class="max">15°</span>
+                <span class="min">10°</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          This project was coded by <a href="#">Olga Kovalenko</a> and is
+          <a href="#">open-sourced on GitHub</a> and
+          <a href="#">hosted on Netlify</a>.
+        </p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
